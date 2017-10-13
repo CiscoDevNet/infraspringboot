@@ -74,6 +74,3 @@ fabric.properties
 hs_err_pid*
 
 target/
-infraspringboot.iml
-pom.xml
-src/
