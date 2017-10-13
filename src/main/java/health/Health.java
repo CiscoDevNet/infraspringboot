@@ -1,4 +1,4 @@
-package hello;
+package health;
 
 import com.cisco.devnet.infracheck.InfraCheck;
 import com.mashape.unirest.http.HttpResponse;
@@ -12,23 +12,19 @@ public class Health {
 
     public HttpResponse<JsonNode> getHealth() {
 
-        String healthStatus;
         HttpResponse<JsonNode> healthObject;
         InfraCheck health = new InfraCheck();
 
         try {
 
             log.info("Starting healthcheck process");
-            String token = health.getTicket();
 
-            healthObject = health.pathCheck(token);
+            // Logs into server and receives a "ticket" (aka token)
+            String ticket = health.getTicket();
 
-            healthStatus = healthObject
-                    .getBody()
-                    .getObject()
-                    .getJSONObject("response")
-                    .getJSONObject("request")
-                    .getString("status");
+            // Uses ticket in header to execute path check
+            healthObject = health.pathCheck(ticket);
+
 
         } catch (Exception e) {
             throw new RuntimeException(e);
