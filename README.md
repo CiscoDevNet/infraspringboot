@@ -6,6 +6,8 @@ An example project that uses the `libinfracheck` example library.
 
 # Usage
 
+* Install `libinfracheck` into your local Maven repository per the instructions in the other repo.
+
 Gradle:
 * `gradle bootRun`
 
