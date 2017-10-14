@@ -6,4 +6,8 @@ An example project that uses the `libinfracheck` example library.
 
 # Usage
 
+Gradle:
+* `gradle bootRun`
+
+Maven: 
 * `mvn spring-boot:run`

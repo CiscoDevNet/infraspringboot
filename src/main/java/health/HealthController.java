@@ -25,28 +25,7 @@ public class HealthController {
 
         HealthResponse response = new HealthResponse();
 
-        return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
-////        HttpResponse<JsonNode> result = response.getHealth();
-//
-//        if (response.getBody()
-//                .getObject()
-//                .getJSONObject("response")
-//                .getJSONObject("request")
-//                .getString("status").equals("FAILED")) {
-//
-//            log.info("Health check failed: Sending response");
-//
-////            response.sendError(500, result.getBody().toString());
-//            return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
-//
-//        } else {
-//
-//            log.info("Health check passed: Sending response");
-//
-////            response.setStatus(200);
-//            return new ResponseEntity<>(response, HttpStatus.OK);
-//
-//        }
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
 }

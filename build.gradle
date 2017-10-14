@@ -1,0 +1,32 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.7.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+group = 'com.cisco.devnet'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+	mavenLocal()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile("com.cisco.devnet:libinfracheck:1.0-SNAPSHOT")
+	compile("com.mashape.unirest:unirest-java:1.4.9")
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
