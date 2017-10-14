@@ -51,30 +51,4 @@ public class HealthResponse {
         return originalResponse;
     }
 
-
-//    public HttpResponse<JsonNode> getHealth() {
-//
-//        HttpResponse<JsonNode> healthObject;
-//        InfraCheck health = new InfraCheck();
-//
-//        try {
-//
-//            log.info("Starting healthcheck process");
-//
-//            // Logs into server and receives a "ticket" (aka token)
-//            String ticket = health.getTicket();
-//
-//            // Uses ticket in header to execute path check
-//            healthObject = health.pathCheck(ticket);
-//
-//
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//        log.info("Returning health check result");
-//
-//        return healthObject;
-//
-//    }
 }
