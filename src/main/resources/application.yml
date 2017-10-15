@@ -1,2 +1,10 @@
+info:
+  app:
+    name: Infracheck Example
+    description: Example application that uses infracheck
+    version: 1.0-SNAPSHOT
+management:
+  security:
+    enabled: false
 server:
   port: 8080
