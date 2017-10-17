@@ -32,7 +32,12 @@ public class InfraCheckHealthIndicator implements HealthIndicator {
         String ticket = infraCheck.getTicket();
         HttpResponse<JsonNode> response = infraCheck.pathCheck(ticket, traceId);
 
-        String healthStatus = response.getBody().getObject().getJSONObject("response").getJSONObject("request").getString("status");
+        String healthStatus = response
+                .getBody()
+                .getObject()
+                .getJSONObject("response")
+                .getJSONObject("request")
+                .getString("status");
 
         if (healthStatus.equals("FAILED")) {
             return Health.down().withDetail("Error Code", response.getBody().toString()).build();
