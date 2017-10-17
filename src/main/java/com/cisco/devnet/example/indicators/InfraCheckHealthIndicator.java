@@ -1,6 +1,7 @@
 package com.cisco.devnet.example.indicators;
 
 import com.cisco.devnet.example.models.HealthResponse;
+import com.cisco.devnet.infracheck.InfraCheck;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,10 +12,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class InfraCheckHealthIndicator implements HealthIndicator {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(InfraCheckHealthIndicator.class);
+
     @Value("${apicem.traceId}")
     private String traceId;
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(InfraCheckHealthIndicator.class);
+    private InfraCheck infraCheck;
+
+    public InfraCheckHealthIndicator(InfraCheck infraCheck) {
+        this.infraCheck = infraCheck;
+    }
 
     @Override
     public Health health() {
