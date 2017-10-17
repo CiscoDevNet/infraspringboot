@@ -40,7 +40,7 @@ public class InfraCheckHealthIndicator implements HealthIndicator {
                 .getString("status");
 
         if (healthStatus.equals("FAILED")) {
-            return Health.down().withDetail("Error Code", response.getBody().toString()).build();
+            return Health.down().withDetail("Error Code", response.getBody().getObject()).build();
         }
         return Health.up().build();
     }
