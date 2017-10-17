@@ -26,6 +26,7 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.projectlombok:lombok:1.16.18')
 	compile("org.springframework.boot:spring-boot-starter-actuator")
 	compile("com.cisco.devnet:libinfracheck:1.0-SNAPSHOT")
 	compile("com.mashape.unirest:unirest-java:1.4.9")
