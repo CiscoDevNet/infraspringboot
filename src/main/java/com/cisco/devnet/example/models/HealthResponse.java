@@ -1,4 +1,4 @@
-package models;
+package com.cisco.devnet.example.models;
 
 import com.cisco.devnet.infracheck.InfraCheck;
 import com.fasterxml.jackson.annotation.JsonRawValue;
