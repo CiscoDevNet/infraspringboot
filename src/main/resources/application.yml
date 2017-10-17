@@ -8,5 +8,6 @@ management:
     enabled: false
 server:
   port: 8080
+
 apicem:
   traceId: 7ce5d5e4-98f3-4ae3-ba90-b3d81502fb90
