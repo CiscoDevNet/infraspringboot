@@ -79,8 +79,14 @@ public class InfraCheckHealthIndicator implements HealthIndicator {
             @JsonIgnoreProperties(ignoreUnknown = true)
             public static class Request {
 
+                @JsonProperty("sourceIP")
+                private String sourceIP;
+
                 @JsonProperty("destIP")
                 private String destIP;
+
+                @JsonProperty("failureReason")
+                private String failureReason;
 
             }
         }
