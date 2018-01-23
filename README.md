@@ -12,6 +12,15 @@
 
 * Install `libinfracheck` into your local Maven repository per the instructions in the [libinfracheck](https://github.com/ciscodevnet/libinfracheck) repo.
 
+Then, you will need to update the `application.yml` with the a pathId that you'd like to use:
+
+```
+apicem:
+  traceId: 3772b101-6769-4dd7-9fbf-cdd45d8971ea
+```
+
+You can login (devnetuser/Cisco123!) to the [DevNet APIC-EM Sandbox](https://sandboxapic.cisco.com) to find a pathId of your choosing.  Look under Flow Analysis.
+
 Gradle:
 * `gradle bootRun`
 
@@ -36,3 +45,4 @@ If you have questions, concerns, bug reports, etc, please file an issue in this 
 ## Credits and references
 
 * Thanks to Ali Ghorbani Moghadam for his help with SpringBoot
+* DevNet Sandbox: https://devnetsandbox.cisco.com
