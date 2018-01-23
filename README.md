@@ -44,5 +44,5 @@ If you have questions, concerns, bug reports, etc, please file an issue in this 
 
 ## Credits and references
 
-* Thanks to Ali Ghorbani Moghadam for his help with SpringBoot
+* Thanks to [Ali Moghadam](https://github.com/alighm) for his help with SpringBoot
 * DevNet Sandbox: https://devnetsandbox.cisco.com
