@@ -24,9 +24,19 @@ public class InfraCheckHealthIndicator implements HealthIndicator {
     @Value("${apicem.traceId}")
     private String traceId;
 
+    @Value("${apicem.username}")
+    private String username;
+
+    @Value("${apicem.password}")
+    private String password;
+
+    @Value("${apicem.url}")
+    private String url;
+
     private InfraCheck infraCheck;
 
     public InfraCheckHealthIndicator(InfraCheck infraCheck) {
+//        infraCheck.setConfig(url);
         this.infraCheck = infraCheck;
     }
 
@@ -35,7 +45,8 @@ public class InfraCheckHealthIndicator implements HealthIndicator {
 
         LOGGER.info(String.format("TraceID is equal to %s", traceId));
 
-        String ticket = infraCheck.getTicket();
+        infraCheck.setConfig(url);
+        String ticket = infraCheck.getTicket(username, password);
         HttpResponse<JsonNode> response = infraCheck.pathCheck(ticket, traceId);
 
         String healthStatus = response
