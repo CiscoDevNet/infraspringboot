@@ -21,16 +21,16 @@ public class InfraCheckHealthIndicator implements HealthIndicator {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(InfraCheckHealthIndicator.class);
 
-    @Value("${apicem.traceId}")
+    @Value("${controller.traceId}")
     private String traceId;
 
-    @Value("${apicem.username}")
+    @Value("${controller.username}")
     private String username;
 
-    @Value("${apicem.password}")
+    @Value("${controller.password}")
     private String password;
 
-    @Value("${apicem.url}")
+    @Value("${controller.url}")
     private String url;
 
     private InfraCheck infraCheck;

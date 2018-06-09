@@ -9,8 +9,8 @@ management:
 server:
   port: 8080
 
-apicem:
-  traceId: 83146cfe-44f1-4445-94e7-87c6327490c8
-  username: devnetuser
-  password: Cisco123!
-  url: https://sandboxapicem.cisco.com/api
+controller:
+  traceId: 760b0560-1da2-42dc-8bc3-5d7a48a71150
+  username: admin
+  password: Cisco123
+  url: https://192.168.139.73/api
