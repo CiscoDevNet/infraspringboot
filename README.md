@@ -19,7 +19,7 @@ apicem:
   traceId: 3772b101-6769-4dd7-9fbf-cdd45d8971ea
 ```
 
-You can login (devnetuser/Cisco123!) to the [DevNet APIC-EM Sandbox](https://sandboxapic.cisco.com) to find a pathId of your choosing.  Look under Flow Analysis.
+You can login (devnetuser/Cisco123!) to the [DevNet DNAC Sandbox](https://sandboxdnac.cisco.com) to find a pathId of your choosing.  Look under Flow Analysis.
 
 Gradle:
 * `gradle bootRun`
@@ -29,7 +29,7 @@ Maven:
 
 ## Known issues
 
-* None
+* Lombok throws error when running under Java 9.
 
 ## Getting help
 
