@@ -15,7 +15,7 @@
 Then, you will need to update the `application.yml` with the a pathId that you'd like to use:
 
 ```
-apicem:
+controller:
   traceId: 3772b101-6769-4dd7-9fbf-cdd45d8971ea
 ```
 
